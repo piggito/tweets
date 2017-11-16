@@ -24,7 +24,7 @@ function template_preprocess_tweets(&$variables) {
 
       $settings = array(
         '#type' => 'processed_text',
-        '#text' => $tweet->text,
+        '#text' => htmlspecialchars_decode($tweet->text),
         '#format' => NULL,
         '#filter_types_to_skip' => array(),
         '#langcode' => '',
